@@ -1,0 +1,82 @@
+package org.kotopka;
+
+/**
+ * EdgeWeightedGraph - An abstract data type implementing an edge-weighted undirected graph.<br>
+ * Largely copied from the Algorithms II course on Coursera.
+ */
+public class EdgeWeightedGraph {
+
+    private final int vertexCount;
+    private final Bag<Edge>[] adj;    // vertex-indexed array of Edge lists
+    private int edgeCount;
+
+    @SuppressWarnings("unchecked")
+    public EdgeWeightedGraph(int v) {
+        this.vertexCount = v;
+        this.adj = (Bag<Edge>[]) new Bag[v];
+
+        for (int i = 0; i < vertexCount; i++) {
+            adj[i] = new Bag<>();
+        }
+    }
+
+    /**
+     * addEdge() - Adds an edge to this edge-weighted undirected graph
+     * @param e the edge to be added
+     */
+    public void addEdge(Edge e) {
+        int v = e.either();
+        int w = e.other(v);
+
+        adj[v].add(e);
+        adj[w].add(e);
+        edgeCount++;
+    }
+
+    /**
+     * adj() - Returns an object of type Iterable of all edges incident to vertex v.
+     * @param v The vertex incident to the desired edges
+     * @return An object of type Iterable. Order should be considered arbitrary.
+     */
+    public Iterable<Edge> adj(int v) {
+        return adj[v];
+    }
+
+    /**
+     * edges() - Returns an object of type Iterable of all edges in the edge-weighted undirected graph.
+     * @return An object of type Iterable containing all of the edges in this graph. Order should be considered arbitrary.
+     */
+    public Iterable<Edge> edges() {
+        Bag<Edge> allEdges = new Bag<>();
+
+        for (int v = 0; v < vertexCount; v++) {
+            for (Edge e : adj(v)) {
+                if (e.other(v) > v) allEdges.add(e);
+            }
+        }
+
+        return allEdges;
+    }
+
+    /**
+     * V() - The number of vertices in this edge-weighted undirected graph.
+     * @return an integer of the number of vertices
+     */
+    public int V() {
+        return vertexCount;
+    }
+
+    /**
+     * E() - The number of edges in this edge-weighted undirected graph
+     * @return an integer of the number of edges
+     */
+    public int E() {
+        return edgeCount;
+    }
+
+    @Override
+    public String toString() {
+
+        return "";
+    }
+}
