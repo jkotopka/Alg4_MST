@@ -34,7 +34,7 @@ public class WeightedUnionFind {
     }
 
     /**
-     * <code>union()</code> - Joins two sites.
+     * <code>union()</code> - Joins two sites by joining the smaller subtree to the larger subtree.
      * @param p integer for site "p"
      * @param q integer for site "q"
      */
@@ -59,15 +59,15 @@ public class WeightedUnionFind {
     }
 
     /**
-     * <code>find()</code> - Finds the root of the connected component containing site "p".
+     * <code>find()</code> - Finds the root of the connected component containing site "p". Performs path compression in the process
      * @param p integer for the site to be queried
      * @return integer of the root of the connected component containing site "p"
      */
     public int find(int p) {
         validatePoint(p);
 
-        return id[p];
-//        return root(p);
+//        return id[p];
+        return root(p);
     }
 
     /**
@@ -111,13 +111,12 @@ public class WeightedUnionFind {
     @Override
     public String toString() {
         ArrayList<String> al = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
             al.add(String.valueOf(id[i]));
         }
 
-        return String.join(", ", al);
+        return "[" + String.join(", ", al) + "]";
     }
 
     // low-effort testing
@@ -166,6 +165,9 @@ public class WeightedUnionFind {
 
         System.out.println("Find 1: " + wuf.find(1));
         System.out.println("Connected 1, 6? " + wuf.connected(1, 6));
+        System.out.println(wuf);
+
+        System.out.println("Connected 7, 5? " + wuf.connected(7, 5));
         System.out.println(wuf);
 
 
