@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d106fff-4d69-47f7-9395-bb8524acef83" name="Default Changelist" comment="First Commit" />
+    <list default="true" id="3d106fff-4d69-47f7-9395-bb8524acef83" name="Default Changelist" comment="add WeightedUnionFindTest.java">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,9 +39,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../week1/AdjListGraph" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Algorithms I/week1/UnionFind" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -48,8 +53,21 @@
       <recent name="org.kotopka" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EdgeTest">
-    <configuration name="BagTest.iteratorNextReturnsCorrectValueFourItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WeightedUnionFindTest.findSelectsCorrectRoot">
+    <configuration name="WeightedUnionFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFind" />
+      <module name="MST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kotopka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeightedUnionFindTest.countCorrectWUFAfterThreeUnions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -58,14 +76,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.BagTest" />
-      <option name="METHOD_NAME" value="iteratorNextReturnsCorrectValueFourItems" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
+      <option name="METHOD_NAME" value="countCorrectWUFAfterThreeUnions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeightedUnionFindTest.countCorrectWUFCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -74,29 +92,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EdgeTest.eitherReturnsVertex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.kotopka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeTest" />
-      <option name="METHOD_NAME" value="eitherReturnsVertex" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
+      <option name="METHOD_NAME" value="countCorrectWUFCreation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeTest.otherReturnsOtherVertex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeightedUnionFindTest.findSelectsCorrectRoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -105,14 +108,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeTest" />
-      <option name="METHOD_NAME" value="otherReturnsOtherVertex" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
+      <option name="METHOD_NAME" value="findSelectsCorrectRoot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeTest.weightReturnsCorrectWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeightedUnionFindTest.unionJoinsTwoSites" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeTest" />
-      <option name="METHOD_NAME" value="weightReturnsCorrectWeight" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
+      <option name="METHOD_NAME" value="unionJoinsTwoSites" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EdgeTest" />
-        <item itemvalue="JUnit.EdgeTest.weightReturnsCorrectWeight" />
-        <item itemvalue="JUnit.EdgeTest.otherReturnsOtherVertex" />
-        <item itemvalue="JUnit.EdgeTest.eitherReturnsVertex" />
-        <item itemvalue="JUnit.BagTest.iteratorNextReturnsCorrectValueFourItems" />
+        <item itemvalue="JUnit.WeightedUnionFindTest.findSelectsCorrectRoot" />
+        <item itemvalue="JUnit.WeightedUnionFindTest.unionJoinsTwoSites" />
+        <item itemvalue="JUnit.WeightedUnionFindTest.countCorrectWUFAfterThreeUnions" />
+        <item itemvalue="JUnit.WeightedUnionFindTest.countCorrectWUFCreation" />
+        <item itemvalue="Application.WeightedUnionFind" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +157,28 @@
       <option name="project" value="LOCAL" />
       <updated>1615492566225</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First implementation of WeightedUnionFind.java">
+      <created>1615587113517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615587113517</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WeightedUnionFind.java cleanup">
+      <created>1615587490762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615587490762</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add WeightedUnionFindTest.java">
+      <created>1615594867724</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615594867724</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +195,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="First implementation of WeightedUnionFind.java" />
+    <MESSAGE value="WeightedUnionFind.java cleanup" />
+    <MESSAGE value="add WeightedUnionFindTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add WeightedUnionFindTest.java" />
   </component>
 </project>
