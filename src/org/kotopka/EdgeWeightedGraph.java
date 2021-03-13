@@ -12,6 +12,8 @@ public class EdgeWeightedGraph {
 
     @SuppressWarnings("unchecked")
     public EdgeWeightedGraph(int v) {
+        if (v <= 0) throw new IllegalArgumentException("Graph must have positive number of vertices");
+
         this.vertexCount = v;
         this.adj = (Bag<Edge>[]) new Bag[v];
 
