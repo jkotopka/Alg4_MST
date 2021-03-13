@@ -21,7 +21,7 @@ public class EdgeWeightedGraph {
     }
 
     /**
-     * addEdge() - Adds an edge to this edge-weighted undirected graph
+     * addEdgedgeCount() - Adds an edge to this edge-weighted undirected graph
      * @param e the edge to be added
      */
     public void addEdge(Edge e) {
@@ -59,24 +59,38 @@ public class EdgeWeightedGraph {
     }
 
     /**
-     * V() - The number of vertices in this edge-weighted undirected graph.
+     * vertexCount() - The number of vertices in this edge-weighted undirected graph.
      * @return an integer of the number of vertices
      */
-    public int V() {
-        return vertexCount;
-    }
+    public int vertexCount() { return vertexCount; }
 
     /**
-     * E() - The number of edges in this edge-weighted undirected graph
+     * edgeCount() - The number of edges in this edge-weighted undirected graph
      * @return an integer of the number of edges
      */
-    public int E() {
-        return edgeCount;
-    }
+    public int edgeCount() { return edgeCount; }
 
+    /**
+     * <code>toString()</code> - String representation of this graph
+     * @return String
+     */
     @Override
     public String toString() {
+        StringBuilder sb = new StringBuilder();
 
-        return "";
+        sb.append("[");
+
+        for (Edge e : edges()) {
+            sb.append("(").append(e).append("), ");
+        }
+
+        if (sb.length() > 2) {
+            sb.setCharAt(sb.length() - 2, ']');
+            sb.setLength(sb.length() - 1);
+        } else {
+            sb.append("]");
+        }
+
+        return sb.toString();
     }
 }
