@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d106fff-4d69-47f7-9395-bb8524acef83" name="Default Changelist" comment="add WeightedUnionFindTest.java">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3d106fff-4d69-47f7-9395-bb8524acef83" name="Default Changelist" comment="update README.md">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -25,6 +24,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1pa3pYsfWYyupcB3bmh1LAdWEqM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,7 +50,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Algorithms I/week1/UnionFind" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -53,9 +60,9 @@
       <recent name="org.kotopka" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WeightedUnionFindTest.findSelectsCorrectRoot">
-    <configuration name="WeightedUnionFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFind" />
+  <component name="RunManager" selected="Application.KruskalMST">
+    <configuration name="KruskalMST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.KruskalMST" />
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -67,7 +74,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeightedUnionFindTest.countCorrectWUFAfterThreeUnions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.MinPQ" />
+      <module name="MST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kotopka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EdgeWeightedGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -76,14 +96,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
-      <option name="METHOD_NAME" value="countCorrectWUFAfterThreeUnions" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeWeightedGraphTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EdgeWeightedGraphTest.vertexCountCorrectWhenConstructed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kotopka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kotopka" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeWeightedGraphTest" />
+      <option name="METHOD_NAME" value="vertexCountCorrectWhenConstructed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeightedUnionFindTest.countCorrectWUFCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinPQTest.delMinReturnsMinElementAndReducesSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
         <pattern>
@@ -92,40 +127,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
-      <option name="METHOD_NAME" value="countCorrectWUFCreation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeightedUnionFindTest.findSelectsCorrectRoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.kotopka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
-      <option name="METHOD_NAME" value="findSelectsCorrectRoot" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeightedUnionFindTest.unionJoinsTwoSites" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.kotopka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.WeightedUnionFindTest" />
-      <option name="METHOD_NAME" value="unionJoinsTwoSites" />
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.MinPQTest" />
+      <option name="METHOD_NAME" value="delMinReturnsMinElementAndReducesSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WeightedUnionFindTest.findSelectsCorrectRoot" />
-        <item itemvalue="JUnit.WeightedUnionFindTest.unionJoinsTwoSites" />
-        <item itemvalue="JUnit.WeightedUnionFindTest.countCorrectWUFAfterThreeUnions" />
-        <item itemvalue="JUnit.WeightedUnionFindTest.countCorrectWUFCreation" />
-        <item itemvalue="Application.WeightedUnionFind" />
+        <item itemvalue="Application.KruskalMST" />
+        <item itemvalue="Application.MinPQ" />
+        <item itemvalue="JUnit.MinPQTest.delMinReturnsMinElementAndReducesSize" />
+        <item itemvalue="JUnit.EdgeWeightedGraphTest" />
+        <item itemvalue="JUnit.EdgeWeightedGraphTest.vertexCountCorrectWhenConstructed" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +181,133 @@
       <option name="project" value="LOCAL" />
       <updated>1615594867724</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add vcs.xml and workspace.xml">
+      <created>1615595202748</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615595202748</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add MinPQ.java - Minimum Priority Queue class skeleton">
+      <created>1615596328483</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1615596328483</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update README.md">
+      <created>1615596345004</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615596345004</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add MinPQTest.java">
+      <created>1615646897678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615646897678</updated>
+    </task>
+    <task id="LOCAL-00009" summary="cleanup various javadoc strings">
+      <created>1615646974978</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1615646974978</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implement MinPQ.java from skeleton class">
+      <created>1615647287458</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615647287458</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix minor resizing logic bug in MaxPQ.delMin()">
+      <created>1615650823396</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615650823396</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add tests delMinSetsRemovedElementToNull() and insertThenDeleteMinToEmptyThenInsertMoreItems()">
+      <created>1615650875829</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615650875829</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add Queue.java and QueueTest.java">
+      <created>1615651771176</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615651771176</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update javadoc for getHeap()">
+      <created>1615653464598</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1615653464598</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update README.md">
+      <created>1615653480726</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1615653480726</updated>
+    </task>
+    <task id="LOCAL-00016" summary="implement toString() method in EdgeWeightedGraph.java">
+      <created>1615656512724</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1615656512724</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add EdgeWeightedGraphTest.java">
+      <created>1615656565083</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1615656565083</updated>
+    </task>
+    <task id="LOCAL-00018" summary="small change to EdgeWeightedGraph.java toString() method">
+      <created>1615656872466</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1615656872466</updated>
+    </task>
+    <task id="LOCAL-00019" summary="throw exception with &lt;=0 vertices in EdgeWeightedGraph.java constructor">
+      <created>1615657752307</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1615657752307</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test invalid number of vertices in EdgeWeightedGraphTest.java">
+      <created>1615657789563</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1615657789563</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix insidious bug in MinPQ.java sink() method">
+      <created>1615664496115</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1615664496115</updated>
+    </task>
+    <task id="LOCAL-00022" summary="implement KruskalMST.java">
+      <created>1615664527817</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1615664527817</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +327,38 @@
     <MESSAGE value="First implementation of WeightedUnionFind.java" />
     <MESSAGE value="WeightedUnionFind.java cleanup" />
     <MESSAGE value="add WeightedUnionFindTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="add WeightedUnionFindTest.java" />
+    <MESSAGE value="add vcs.xml and workspace.xml" />
+    <MESSAGE value="add MinPQ.java - Minimum Priority Queue class skeleton" />
+    <MESSAGE value="add MinPQTest.java" />
+    <MESSAGE value="cleanup various javadoc strings" />
+    <MESSAGE value="implement MinPQ.java from skeleton class" />
+    <MESSAGE value="fix minor resizing logic bug in MaxPQ.delMin()" />
+    <MESSAGE value="add tests delMinSetsRemovedElementToNull() and insertThenDeleteMinToEmptyThenInsertMoreItems()" />
+    <MESSAGE value="add Queue.java and QueueTest.java" />
+    <MESSAGE value="update javadoc for getHeap()" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="implement toString() method in EdgeWeightedGraph.java" />
+    <MESSAGE value="add EdgeWeightedGraphTest.java" />
+    <MESSAGE value="small change to EdgeWeightedGraph.java toString() method" />
+    <MESSAGE value="throw exception with &lt;=0 vertices in EdgeWeightedGraph.java constructor" />
+    <MESSAGE value="test invalid number of vertices in EdgeWeightedGraphTest.java" />
+    <MESSAGE value="fix insidious bug in MinPQ.java sink() method" />
+    <MESSAGE value="implement KruskalMST.java" />
+    <MESSAGE value="update .gitignore and workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore and workspace.xml" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/org/kotopka/MinPQ.java</url>
+          <line>132</line>
+          <properties class="org.kotopka.MinPQ" method="delMin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
