@@ -139,7 +139,7 @@ public class MinPQ<Key extends Comparable<Key>>{
         sink(1);
         heap[size--] = null; // be kind to the JVM GC
 
-        if (size <= heap.length / 4) {
+        if (size >= 1 && size <= heap.length / 4) {
             int newSize = heap.length - 1;
             newSize /= 2;
             newSize += 1;
@@ -166,5 +166,6 @@ public class MinPQ<Key extends Comparable<Key>>{
      * @return integer of the heap length
      */
     int heapLength() { return heap.length; }
+    Comparable<Key>[] getHeap() { return heap; }
 
 }
