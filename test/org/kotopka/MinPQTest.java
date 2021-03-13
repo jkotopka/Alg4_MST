@@ -2,6 +2,7 @@ package org.kotopka;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -151,4 +152,52 @@ class MinPQTest {
         assertThrows(NoSuchElementException.class, pq::delMin);
     }
 
+    @Test
+    public void  delMinSetsRemovedElementToNull() {
+        MinPQ<Integer> pq = new MinPQ<>();
+
+        pq.insert(2);
+        pq.insert(3);
+        pq.insert(1);
+        pq.insert(5);
+        pq.insert(4);
+
+        pq.delMin();
+        assertNull(pq.getHeap()[5]);
+
+        pq.delMin();
+        assertNull(pq.getHeap()[4]);
+
+        pq.delMin();
+        assertNull(pq.getHeap()[3]);
+    }
+
+    @Test
+    public void insertThenDeleteMinToEmptyThenInsertMoreItems() {
+        MinPQ<Integer> pq = new MinPQ<>();
+
+        pq.insert(2);
+        pq.insert(3);
+        pq.insert(1);
+        pq.insert(5);
+        pq.insert(4);
+
+        pq.delMin();
+        pq.delMin();
+        pq.delMin();
+        pq.delMin();
+        pq.delMin();
+
+        assertEquals(0, pq.size());
+        assertTrue(pq.isEmpty());
+
+        pq.insert(2);
+        pq.insert(3);
+        pq.insert(1);
+        pq.insert(5);
+        pq.insert(4);
+
+        assertEquals(5, pq.size());
+        assertFalse(pq.isEmpty());
+    }
 }
