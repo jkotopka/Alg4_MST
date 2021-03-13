@@ -3,7 +3,7 @@ package org.kotopka;
 import java.util.ArrayList;
 
 /**
- * <code>WeightedUnionFind</code> data type. Implements the weighted union-find data type from <em>Algorithms 4th ed.</em>
+ * <code>WeightedUnionFind</code> - Implements the weighted union-find disjoint-set data type from <em>Algorithms 4th ed.</em>
  * This data type can be used to join elements into the same connected component, and to query if elements are in the same component.
  */
 public class WeightedUnionFind {

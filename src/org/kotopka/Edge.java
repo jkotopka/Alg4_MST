@@ -1,7 +1,7 @@
 package org.kotopka;
 
 /**
- * Edge data type. Used to represent an edge in a weighted graph.
+ * <code>Edge</code> - Used to represent an edge in a weighted graph.
  */
 public class Edge implements Comparable<Edge> {
 
@@ -54,6 +54,7 @@ public class Edge implements Comparable<Edge> {
 
         if      (this.weight > other.weight) return 1;
         else if (this.weight < other.weight) return -1;
+
         return 0;
     }
 

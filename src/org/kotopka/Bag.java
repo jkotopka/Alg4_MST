@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * <code>Bag</code> data type. Holds generic values. Allows adding and iterating over the elements added.
+ * <code>Bag</code> - Holds generic values. Allows adding and iterating over the elements added.
  * This particular implementation uses a linked-list. Does not support removal of items. <br>
  * Inspired by code in <em>Algorithms 4th ed.</em> by Robert Sedgewick and Kevin Wayne.
  * @param <T> Any valid Java reference type

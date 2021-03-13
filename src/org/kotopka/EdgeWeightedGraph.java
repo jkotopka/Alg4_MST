@@ -1,7 +1,7 @@
 package org.kotopka;
 
 /**
- * EdgeWeightedGraph - An abstract data type implementing an edge-weighted undirected graph.<br>
+ * <code>EdgeWeightedGraph</code> - An abstract data type implementing an edge-weighted undirected graph.<br>
  * Largely copied from the Algorithms II course on Coursera.
  */
 public class EdgeWeightedGraph {
