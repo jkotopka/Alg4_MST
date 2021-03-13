@@ -85,11 +85,10 @@ public class EdgeWeightedGraph {
         }
 
         if (sb.length() > 2) {
-            sb.setCharAt(sb.length() - 2, ']');
-            sb.setLength(sb.length() - 1);
-        } else {
-            sb.append("]");
+            sb.setLength(sb.length() - 2);
         }
+
+        sb.append("]");
 
         return sb.toString();
     }
