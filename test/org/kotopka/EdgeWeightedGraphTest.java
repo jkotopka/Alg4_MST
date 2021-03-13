@@ -8,6 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class EdgeWeightedGraphTest {
 
     @Test
+    public void constructorThrowsExceptionInvalidVertices() {
+        assertThrows(IllegalArgumentException.class, () -> new EdgeWeightedGraph(0));
+        assertThrows(IllegalArgumentException.class, () -> new EdgeWeightedGraph(-3));
+    }
+
+    @Test
     public void vertexCountCorrectWhenConstructed() {
         EdgeWeightedGraph ewg = new EdgeWeightedGraph(10);
         assertEquals(10, ewg.vertexCount());
