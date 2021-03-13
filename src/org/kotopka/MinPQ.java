@@ -75,7 +75,7 @@ public class MinPQ<Key extends Comparable<Key>>{
         while (2 * k <= size) {
             int j = 2 * k;
 
-            // find the bigger of the two children at nodes j and j + 1
+            // find the smaller of the two children at nodes j and j + 1
             // "size" is the last VALID element in the heap
             if (j < size && isGreaterThan(j, j + 1)) { j++; }
 
@@ -135,9 +135,9 @@ public class MinPQ<Key extends Comparable<Key>>{
 
         Key min = heap[1];
 
-        swap(1, size);
+        swap(1, size--);
         sink(1);
-        heap[size--] = null; // be kind to the JVM GC
+        heap[size + 1] = null; // be kind to the JVM GC
 
         if (size >= 1 && size <= heap.length / 4) {
             int newSize = heap.length - 1;
@@ -173,4 +173,35 @@ public class MinPQ<Key extends Comparable<Key>>{
      */
     Comparable<Key>[] getHeap() { return heap; }
 
+    public static void main(String[] args) {
+        EdgeWeightedGraph ewg = new EdgeWeightedGraph(8);
+
+        // graph from Algorithms 4th ed. pg. 604
+        ewg.addEdge(new Edge(4, 5, 0.35));
+        ewg.addEdge(new Edge(4, 7, 0.37));
+        ewg.addEdge(new Edge(5, 7, 0.28));
+        ewg.addEdge(new Edge(0, 7, 0.16));
+        ewg.addEdge(new Edge(1, 5, 0.32));
+        ewg.addEdge(new Edge(0, 4, 0.38));
+        ewg.addEdge(new Edge(2, 3, 0.17));
+        ewg.addEdge(new Edge(1, 7, 0.19));
+        ewg.addEdge(new Edge(0, 2, 0.26));
+        ewg.addEdge(new Edge(1, 2, 0.36));
+        ewg.addEdge(new Edge(1, 3, 0.29));
+        ewg.addEdge(new Edge(2, 7, 0.34));
+        ewg.addEdge(new Edge(6, 2, 0.40));
+        ewg.addEdge(new Edge(3, 6, 0.52));
+        ewg.addEdge(new Edge(6, 0, 0.58));
+        ewg.addEdge(new Edge(6, 4, 0.93));
+
+        MinPQ<Edge> edges = new MinPQ<>();
+
+        for (Edge e : ewg.edges()) {
+            edges.insert(e);
+        }
+
+        while (!edges.isEmpty()) {
+            System.out.println(edges.delMin());
+        }
+    }
 }
