@@ -35,6 +35,7 @@ public class WeightedUnionFind {
 
     /**
      * <code>union()</code> - Joins two sites by joining the smaller subtree to the larger subtree.
+     * Arbitrarily joins "q" to "p" if both connected components are of the same size.
      * @param p integer for site "p"
      * @param q integer for site "q"
      */
