@@ -166,6 +166,11 @@ public class MinPQ<Key extends Comparable<Key>>{
      * @return integer of the heap length
      */
     int heapLength() { return heap.length; }
+
+    /**
+     * <code>getHeap()</code> - Package private method for unit testing, returns the heap array.
+     * @return Comparable<Key>[] array
+     */
     Comparable<Key>[] getHeap() { return heap; }
 
 }
