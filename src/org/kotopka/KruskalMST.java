@@ -28,7 +28,7 @@ public class KruskalMST {
 
         // The MST will have vertexCount - 1 edges. Fencepost counting,
         // where each vertex is the "fencepost" and each edge is the "panel" in-between them
-        while (!edgeMinPQ.isEmpty() && mst.size() < vertexCount) {
+        while (!edgeMinPQ.isEmpty() && mst.size() < vertexCount - 1) {
             Edge currentEdge = edgeMinPQ.delMin();
 
             System.out.println("current edge: " + currentEdge);
