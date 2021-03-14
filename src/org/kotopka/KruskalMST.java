@@ -1,5 +1,9 @@
 package org.kotopka;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * <code>KruskalMST</code> - Implements the Kruskal Minimum-Spanning Tree algorithm.
  */
@@ -56,35 +60,38 @@ public class KruskalMST {
     // test client, to correspond with the trace on pg. 627 of Algorithms 4th 3d.
     public static void main(String[] args) {
 
-        EdgeWeightedGraph ewg = new EdgeWeightedGraph(8);
-
-        // graph from Algorithms 4th ed. pg. 604
-        ewg.addEdge(new Edge(4, 5, 0.35));
-        ewg.addEdge(new Edge(4, 7, 0.37));
-        ewg.addEdge(new Edge(5, 7, 0.28));
-        ewg.addEdge(new Edge(0, 7, 0.16));
-        ewg.addEdge(new Edge(1, 5, 0.32));
-        ewg.addEdge(new Edge(0, 4, 0.38));
-        ewg.addEdge(new Edge(2, 3, 0.17));
-        ewg.addEdge(new Edge(1, 7, 0.19));
-        ewg.addEdge(new Edge(0, 2, 0.26));
-        ewg.addEdge(new Edge(1, 2, 0.36));
-        ewg.addEdge(new Edge(1, 3, 0.29));
-        ewg.addEdge(new Edge(2, 7, 0.34));
-        ewg.addEdge(new Edge(6, 2, 0.40));
-        ewg.addEdge(new Edge(3, 6, 0.52));
-        ewg.addEdge(new Edge(6, 0, 0.58));
-        ewg.addEdge(new Edge(6, 4, 0.93));
-
-        KruskalMST mst = new KruskalMST(ewg);
-
-        System.out.println("Vertex count: " + mst.vertexCount());
-        System.out.println("Edge count: " + mst.edgeCount());
-
-        for(Edge e : mst.edges()) {
-            System.out.println(e);
+        if (args.length == 0) {
+            System.out.println("Error: missing commandline argument.");
+            System.exit(-1);
         }
 
-        System.out.println("Total weight: " + mst.totalWeight());
+        try (Scanner reader = new Scanner(new File(args[0]))) {
+            int vertexCount = reader.nextInt();
+            int edgeCount = reader.nextInt();
+
+            System.out.println("Edge-weighted Graph Vertices: " + vertexCount);
+            System.out.println("Edge-weighted Graph Edges: " + edgeCount);
+            System.out.println();
+
+            EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertexCount);
+
+            while (reader.hasNext()) {
+                ewg.addEdge(new Edge(reader.nextInt(), reader.nextInt(), reader.nextDouble()));
+            }
+
+            KruskalMST mst = new KruskalMST(ewg);
+
+            System.out.println("MST Vertices: " + mst.vertexCount());
+            System.out.println("MST Edges: " + mst.edgeCount());
+            System.out.println("MST Total Weight: " + mst.totalWeight());
+            System.out.println("MST:");
+
+            for (Edge e : mst.edges()) {
+                System.out.println(e);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
