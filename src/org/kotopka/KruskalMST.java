@@ -57,7 +57,7 @@ public class KruskalMST {
 
     public int edgeCount() { return edgeCount; }
 
-    // test client, to correspond with the trace on pg. 627 of Algorithms 4th 3d.
+    // test client
     public static void main(String[] args) {
 
         if (args.length == 0) {
@@ -94,4 +94,5 @@ public class KruskalMST {
             e.printStackTrace();
         }
     }
+
 }
