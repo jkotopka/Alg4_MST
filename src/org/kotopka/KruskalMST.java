@@ -8,7 +8,7 @@ public class KruskalMST {
     private final Queue<Edge> mst;
     private double totalWeight;
     private int edgeCount;
-    private int vertexCount;
+    private final int vertexCount;
 
     /**
      * <code>KruskalMST</code> - Constructor. Takes an object of type <code>EdgeWeightedGraph</code> and creates an MST
@@ -30,13 +30,8 @@ public class KruskalMST {
         // where each vertex is the "fencepost" and each edge is the "panel" in-between them
         while (!edgeMinPQ.isEmpty() && mst.size() < vertexCount - 1) {
             Edge currentEdge = edgeMinPQ.delMin();
-
-            System.out.println("current edge: " + currentEdge);
-
             int v = currentEdge.either();
             int w = currentEdge.other(v);
-
-//            System.out.println(cycleDetector);
 
             // Don't add this edge if it creates a cycle in the MST
             if (!cycleDetector.connected(v, w)) {
@@ -44,12 +39,8 @@ public class KruskalMST {
                 cycleDetector.union(v, w);
                 totalWeight += currentEdge.weight();
                 edgeCount++;
-
             }
         }
-
-        System.out.println("MST size: " + mst.size() + " vertex count: " + vertexCount + " pq empty: " + edgeMinPQ.isEmpty());
-        System.out.println("connected 6 2: " + cycleDetector.connected(6, 2));
     }
 
     public Iterable<Edge> edges() {
@@ -62,6 +53,7 @@ public class KruskalMST {
 
     public int edgeCount() { return edgeCount; }
 
+    // test client, to correspond with the trace on pg. 627 of Algorithms 4th 3d.
     public static void main(String[] args) {
 
         EdgeWeightedGraph ewg = new EdgeWeightedGraph(8);
