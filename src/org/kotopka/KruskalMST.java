@@ -1,13 +1,9 @@
 package org.kotopka;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 /**
  * <code>KruskalMST</code> - Implements the Kruskal Minimum-Spanning Tree algorithm.
  */
-public class KruskalMST {
+public class KruskalMST implements MST {
 
     private final Queue<Edge> mst;
     private double totalWeight;
@@ -47,14 +43,18 @@ public class KruskalMST {
         }
     }
 
+    @Override
     public Iterable<Edge> edges() {
         return mst;
     }
 
+    @Override
     public double totalWeight() { return totalWeight; }
 
+    @Override
     public int vertexCount() { return vertexCount; }
 
+    @Override
     public int edgeCount() { return edgeCount; }
 
     // test client
@@ -65,34 +65,8 @@ public class KruskalMST {
             System.exit(-1);
         }
 
-        try (Scanner reader = new Scanner(new File(args[0]))) {
-            int vertexCount = reader.nextInt();
-            int edgeCount = reader.nextInt();
-
-            System.out.println("Edge-weighted Graph Vertices: " + vertexCount);
-            System.out.println("Edge-weighted Graph Edges: " + edgeCount);
-            System.out.println();
-
-            EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertexCount);
-
-            while (reader.hasNext()) {
-                ewg.addEdge(new Edge(reader.nextInt(), reader.nextInt(), reader.nextDouble()));
-            }
-
-            KruskalMST mst = new KruskalMST(ewg);
-
-            System.out.println("MST Vertices: " + mst.vertexCount());
-            System.out.println("MST Edges: " + mst.edgeCount());
-            System.out.println("MST Total Weight: " + mst.totalWeight());
-            System.out.println("MST:");
-
-            for (Edge e : mst.edges()) {
-                System.out.println(e);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        TestClient tc = new TestClient(new KruskalMST(GraphLoader.load(args[0])));
+        tc.printMst();
     }
 
 }
