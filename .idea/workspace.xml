@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d106fff-4d69-47f7-9395-bb8524acef83" name="Default Changelist" comment="update README.md">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/kotopka/GraphLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/kotopka/LazyPrimMST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/kotopka/MST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/kotopka/TestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kotopka/KruskalMST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kotopka/KruskalMST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,14 +61,35 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Users\jck\Documents\Programming\Coursera\Algorithms II\week2\MST" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.kotopka" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.kotopka" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KruskalMST">
+  <component name="RunManager" selected="Application.LazyPrimMST">
     <configuration name="KruskalMST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.kotopka.KruskalMST" />
       <module name="MST" />
+      <option name="PROGRAM_PARAMETERS" value="graph10.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kotopka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LazyPrimMST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.kotopka.LazyPrimMST" />
+      <module name="MST" />
+      <option name="PROGRAM_PARAMETERS" value="graph10.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.kotopka.*" />
@@ -102,22 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeWeightedGraphTest.vertexCountCorrectWhenConstructed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.kotopka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.kotopka" />
-      <option name="MAIN_CLASS_NAME" value="org.kotopka.EdgeWeightedGraphTest" />
-      <option name="METHOD_NAME" value="vertexCountCorrectWhenConstructed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MinPQTest.delMinReturnsMinElementAndReducesSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MST" />
       <extension name="coverage">
@@ -134,13 +144,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.KruskalMST" />
+      <item itemvalue="Application.MinPQ" />
+      <item itemvalue="Application.LazyPrimMST" />
+      <item itemvalue="JUnit.EdgeWeightedGraphTest" />
+      <item itemvalue="JUnit.MinPQTest.delMinReturnsMinElementAndReducesSize" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LazyPrimMST" />
         <item itemvalue="Application.KruskalMST" />
         <item itemvalue="Application.MinPQ" />
         <item itemvalue="JUnit.MinPQTest.delMinReturnsMinElementAndReducesSize" />
         <item itemvalue="JUnit.EdgeWeightedGraphTest" />
-        <item itemvalue="JUnit.EdgeWeightedGraphTest.vertexCountCorrectWhenConstructed" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +324,70 @@
       <option name="project" value="LOCAL" />
       <updated>1615664527817</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix KruskalMST.java, bug in while loop with &quot;vertexCount&quot; condition check">
+      <created>1615681152486</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1615681152486</updated>
+    </task>
+    <task id="LOCAL-00024" summary="remove System.out.println() calls from KruskalMST.java main while loop.">
+      <created>1615685373443</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1615685373443</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add data files">
+      <created>1615730796385</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1615730796385</updated>
+    </task>
+    <task id="LOCAL-00026" summary="move data files to root directory">
+      <created>1615731061174</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1615731061174</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add commandline argument file reader to KruskalMST.java main() method">
+      <created>1615732230161</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1615732230161</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add commandline argument file reader to KruskalMST.java main() method">
+      <created>1615732708199</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1615732708199</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add commandline argument file reader to KruskalMST.java main() method">
+      <created>1615732718646</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1615732718646</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add commandline argument file reader to KruskalMST.java main() method">
+      <created>1615732760596</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1615732760596</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add graph10.txt">
+      <created>1615735017077</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1615735017077</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,9 +403,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
-    <MESSAGE value="First implementation of WeightedUnionFind.java" />
-    <MESSAGE value="WeightedUnionFind.java cleanup" />
     <MESSAGE value="add WeightedUnionFindTest.java" />
     <MESSAGE value="add vcs.xml and workspace.xml" />
     <MESSAGE value="add MinPQ.java - Minimum Priority Queue class skeleton" />
@@ -345,20 +422,19 @@
     <MESSAGE value="fix insidious bug in MinPQ.java sink() method" />
     <MESSAGE value="implement KruskalMST.java" />
     <MESSAGE value="update .gitignore and workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore and workspace.xml" />
+    <MESSAGE value="fix KruskalMST.java, bug in while loop with &quot;vertexCount&quot; condition check" />
+    <MESSAGE value="remove System.out.println() calls from KruskalMST.java main while loop." />
+    <MESSAGE value="add data files" />
+    <MESSAGE value="move data files to root directory" />
+    <MESSAGE value="add commandline argument file reader to KruskalMST.java main() method" />
+    <MESSAGE value="add graph10.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add graph10.txt" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/org/kotopka/MinPQ.java</url>
-          <line>132</line>
-          <properties class="org.kotopka.MinPQ" method="delMin">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="current" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
