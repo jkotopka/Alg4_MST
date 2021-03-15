@@ -5,6 +5,8 @@ import java.util.NoSuchElementException;
 /**
  * <code>MinPQ</code> - A min-value priority queue. Uses a dynamically-resizing array as a binary-heap.
  * This implementation uses an array indexed from 1 (one) for index arithmetic simplicity.
+ * <br><br>
+ * Adapted from <a href="https://algs4.cs.princeton.edu/home/">Altorithms 4th ed.</a> by Robert Sedgewick and Kevin Wayne
  */
 public class MinPQ<Key extends Comparable<Key>>{
 
