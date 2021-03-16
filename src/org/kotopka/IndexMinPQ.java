@@ -79,6 +79,7 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
     private boolean isGreaterThan(int a, int b) {
         // pq[a] references the item at heap position "a"
         // pq[b] references the item at heap position "b"
+        if (keys[pq[a]] == null || keys[pq[b]] == null) return false;
 
         return keys[pq[a]].compareTo(keys[pq[b]]) > 0;
     }
@@ -193,12 +194,16 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
         sink(1);
         qp[min] = -1;
         keys[min] = null;
-        pq[size + 1] = -1; // not sure if needed?
+        pq[size + 1] = -1;
         return min;
     }
 
     public Key minKey() {
         return keys[pq[1]];
+    }
+
+    public Key key(int index) {
+        return keys[index];
     }
 
     /**
