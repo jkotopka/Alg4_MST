@@ -25,9 +25,11 @@ public class TestClient {
             System.exit(-1);
         }
 
-        TestClient tck = new TestClient(new KruskalMST(GraphLoader.load(args[0])));
-        TestClient tclp = new TestClient(new LazyPrimMST(GraphLoader.load(args[0])));
-        TestClient tcep = new TestClient(new EagerPrimMST(GraphLoader.load(args[0])));
+        EdgeWeightedGraph ewg = GraphLoader.load(args[0]);
+
+        TestClient tck = new TestClient(new KruskalMST(ewg));
+        TestClient tclp = new TestClient(new LazyPrimMST(ewg));
+        TestClient tcep = new TestClient(new EagerPrimMST(ewg));
 
         System.out.println("Kruskal:");
         tck.printMst();
