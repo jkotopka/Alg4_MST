@@ -2,6 +2,8 @@ package org.kotopka;
 
 /**
  * <code>LazyPrimMST</code> - Implements a lazy version of Prim's Minimum-Spanning Tree algorithm.
+ * <br><br>
+ * Adapted from <a href="https://algs4.cs.princeton.edu/home/">Altorithms 4th ed.</a> by Robert Sedgewick and Kevin Wayne
  */
 public class LazyPrimMST implements MST {
 

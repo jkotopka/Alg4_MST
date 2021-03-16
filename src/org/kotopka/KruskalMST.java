@@ -2,6 +2,8 @@ package org.kotopka;
 
 /**
  * <code>KruskalMST</code> - Implements the Kruskal Minimum-Spanning Tree algorithm.
+ * <br><br>
+ * Adapted from <a href="https://algs4.cs.princeton.edu/home/">Altorithms 4th ed.</a> by Robert Sedgewick and Kevin Wayne
  */
 public class KruskalMST implements MST {
 
