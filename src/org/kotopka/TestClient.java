@@ -19,4 +19,26 @@ public class TestClient {
         }
     }
 
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Error: missing commandline argument.");
+            System.exit(-1);
+        }
+
+        TestClient tck = new TestClient(new KruskalMST(GraphLoader.load(args[0])));
+        TestClient tclp = new TestClient(new LazyPrimMST(GraphLoader.load(args[0])));
+        TestClient tcep = new TestClient(new EagerPrimMST(GraphLoader.load(args[0])));
+
+        System.out.println("Kruskal:");
+        tck.printMst();
+        System.out.println();
+
+        System.out.println("Lazy Prim:");
+        tclp.printMst();
+        System.out.println();
+
+        System.out.println("Eager Prim:");
+        tcep.printMst();
+    }
+
 }
