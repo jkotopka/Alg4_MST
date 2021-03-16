@@ -79,6 +79,7 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
     private boolean isGreaterThan(int a, int b) {
         // pq[a] references the item at heap position "a"
         // pq[b] references the item at heap position "b"
+
         if (keys[pq[a]] == null || keys[pq[b]] == null) return false;
 
         return keys[pq[a]].compareTo(keys[pq[b]]) > 0;
@@ -167,7 +168,7 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
         if (keys[i].compareTo(key) < 0) throw new IllegalArgumentException("Smaller key already in queue");
 
         keys[i] = key;
-        swim(i);
+        swim(qp[i]); // HAHA FOUND YOU, YOU PESKY LITTLE BUG!
     }
 
     /**
@@ -194,12 +195,12 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
         sink(1);
         qp[min] = -1;
         keys[min] = null;
-        pq[size + 1] = -1;
+        pq[size + 1] = -1; // not sure if accurate...
         return min;
     }
 
     public Key minKey() {
-        return keys[pq[1]];
+        return keys[pq[1]]; // pq[1] == first heap element, i.e. the smallest element
     }
 
     public Key key(int index) {
