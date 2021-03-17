@@ -15,7 +15,9 @@ Both the `WeightedUnionFind` disjoint-set data type and the `IndexMinPQ` do not 
 `Bag` can be implemented with any number of Java collections, `Queue` can be implemented using e.g. `java.util.ArrayDeque`, 
 and `MinPQ` can be implemented using `java.util.PriorityQueue`.
 
-This repo has methods to compute the MST of a connected, weighted, undirected graph using Kruskal's algorithm, a lazy version of Prim's algorithm, and an eager version of Prim's algorithm. Currently, the focus is on computing the MST of a connected graph with distinct edge weights. Later, computing a minimum-spanning-forest of a disconnected graph with positive, though not necessarily unique, edge weights will be implemented.
+This repo has methods to compute the MST of a connected, weighted, undirected graph using Kruskal's algorithm, a lazy 
+version of Prim's algorithm, and an eager version of Prim's algorithm. These implementations can also compute a minimum-spanning forest 
+of a disconnected graph.
 
 * `KruskalMST` - Calculate the MST using Kruskal's algorithm.
 * `LazyPrimMST` - Calculate the MST using a lazy version of Prim's algorithm.
