@@ -20,22 +20,26 @@ public class LazyPrimMST implements MST {
         this.mst = new Queue<>();
         this.edgeMinPQ = new MinPQ<>();
 
-        visit(edgeWeightedGraph, 0);
+        for (int i = 0; i < vertexCount; i++) {
+            if (marked[i]) continue;
 
-        while (!edgeMinPQ.isEmpty()) {
-            Edge current = edgeMinPQ.delMin();
-            int v = current.either();
-            int w = current.other(v);
+            visit(edgeWeightedGraph, i);
 
-            if (marked[v] && marked[w]) continue;
+            while (!edgeMinPQ.isEmpty()) {
+                Edge current = edgeMinPQ.delMin();
+                int v = current.either();
+                int w = current.other(v);
 
-            // one of these vertices will be marked but we don't know which yet
-            if (!marked[v]) visit(edgeWeightedGraph, v);
-            if (!marked[w]) visit(edgeWeightedGraph, w);
+                if (marked[v] && marked[w]) continue;
 
-            mst.enqueue(current);
-            edgeCount++;
-            totalWeight += current.weight();
+                // one of these vertices will be marked but we don't know which yet
+                if (!marked[v]) visit(edgeWeightedGraph, v);
+                if (!marked[w]) visit(edgeWeightedGraph, w);
+
+                mst.enqueue(current);
+                edgeCount++;
+                totalWeight += current.weight();
+            }
         }
     }
 
