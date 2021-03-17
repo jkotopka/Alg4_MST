@@ -21,6 +21,7 @@ public class EagerPrimMST implements MST {
     private final boolean[] marked;
     private IndexMinPQ<Double> pq;
     private double totalWeight;
+    private int edgeCount;
 
     public EagerPrimMST(EdgeWeightedGraph edgeWeightedGraph) {
         this.vertexCount = edgeWeightedGraph.vertexCount();
@@ -31,6 +32,7 @@ public class EagerPrimMST implements MST {
         this.pq = new IndexMinPQ<>(vertexCount);
 
         this.totalWeight = Double.NEGATIVE_INFINITY;
+        this.edgeCount = Integer.MIN_VALUE;
 
         Arrays.fill(distTo, Double.POSITIVE_INFINITY);
 
@@ -103,7 +105,14 @@ public class EagerPrimMST implements MST {
 
     @Override
     public int edgeCount() {
-        return vertexCount - 1;
+        if (edgeCount == Integer.MIN_VALUE) {
+            edgeCount = 0;
+            for (Edge e : edgeTo) {
+                if (e != null) edgeCount++;
+            }
+        }
+
+        return edgeCount;
     }
 
     // test client
