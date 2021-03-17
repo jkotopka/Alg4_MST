@@ -33,11 +33,25 @@ public class EagerPrimMST implements MST {
         this.totalWeight = Double.NEGATIVE_INFINITY;
 
         Arrays.fill(distTo, Double.POSITIVE_INFINITY);
-        distTo[0] = 0.0;
-        pq.insert(0, 0.0);
 
-        while (!pq.isEmpty()) {
-            visit(edgeWeightedGraph, pq.delMin());
+        // does not compute minimum-spanning-forest
+//        distTo[0] = 0.0;
+//        pq.insert(0, 0.0);
+//
+//        while (!pq.isEmpty()) {
+//            visit(edgeWeightedGraph, pq.delMin());
+//        }
+
+        // computes minimum-spanning-forest
+        for (int i = 0; i < vertexCount; i++) {
+            if (marked[i]) continue;
+
+            distTo[i] = 0.0;
+            pq.insert(i, 0.0);
+
+            while (!pq.isEmpty()) {
+                visit(edgeWeightedGraph, pq.delMin());
+            }
         }
     }
 
@@ -67,7 +81,9 @@ public class EagerPrimMST implements MST {
         Queue<Edge> mst = new Queue<>();
 
         for (int i = 1; i < edgeTo.length; i++) {
-            mst.enqueue(edgeTo[i]);
+            if (edgeTo[i] != null) {
+                mst.enqueue(edgeTo[i]);
+            }
         }
 
         return mst;
