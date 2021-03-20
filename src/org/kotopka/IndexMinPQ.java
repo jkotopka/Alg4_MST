@@ -172,6 +172,25 @@ public class IndexMinPQ<Key extends Comparable<Key>>{
     }
 
     /**
+     * <code>changeKey()</code> - Changes the priority of the key associated with index "i"
+     * @param i integer of the array index
+     * @param key Java generic value of the key to be decreased
+     * @throws IllegalArgumentException if the index is invalid
+     * @throws IllegalArgumentException if the key is null
+     * @throws NoSuchElementException if the index can't be found
+     */
+    public void changeKey(int i, Key key) {
+        validateIndex(i);
+        if (key == null) throw new IllegalArgumentException("Key cannot be null");
+        if (!contains(i)) throw new NoSuchElementException("Index not found");
+
+        keys[i] = key;
+        swim(qp[i]);
+        sink(qp[i]);
+    }
+
+
+    /**
      * <code>contains()</code> - Returns boolean value if the index "i" is associated with a key in this priority queue
      * @param i integer of the array index
      * @return boolean true if this priority queue contains the key at index "i", false otherwise
